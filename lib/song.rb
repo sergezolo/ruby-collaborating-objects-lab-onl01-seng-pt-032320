@@ -7,13 +7,9 @@ class Song
   
   def initialize(name)
     @name = name
-    save
-  end
-  
-  def save
     @@all << self
   end
-  
+
   def self.all
     @@all
   end
@@ -23,7 +19,7 @@ class Song
     song_name = filename.split(" - ")[1]
     song = self.new(song_name)
     song.artist_name = artist
-    song.save
+    song
   end
 
   def artist_name=(name)
