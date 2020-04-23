@@ -30,10 +30,18 @@ class Artist
   # end
   
   def self.find_or_create_by_name(name)
+<<<<<<< HEAD
     if self.find(name)
       self.find(name)
     else
       self.create(name)
+=======
+    if self.all.include?(name)
+      self
+    else
+      artist = Artist.new(name)
+      self
+>>>>>>> 54a93ed1281a61232a6c09dc5f371b64e19d36d3
     end
   end
 
